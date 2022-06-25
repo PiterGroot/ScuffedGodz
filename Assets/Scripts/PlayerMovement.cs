@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,9 +22,26 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        HandleMovement(isKeyboard);
 
+        FlipSprite();
+    }
+
+    private void HandleMovement(bool mode)
+    {
+        if (isKeyboard)
+        {
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
+        }
+        else
+        {
+            //controller stuff
+        }
+    }
+
+    private void FlipSprite()
+    {
         Vector3 characterScale = transform.localScale;
         if (Input.GetAxis("Horizontal") > 0)
         {
