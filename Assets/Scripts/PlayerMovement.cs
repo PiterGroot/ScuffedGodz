@@ -58,4 +58,8 @@ public class PlayerMovement : MonoBehaviour
     {
         rb2D.MovePosition(rb2D.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
+    public void SetStartPosition(Vector2 position)
+    {
+        transform.position = position;
+    }
 }

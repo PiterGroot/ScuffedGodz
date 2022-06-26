@@ -6,4 +6,5 @@ using UnityEngine;
 public class DecorationPack : ScriptableObject
 {
     public List<GameObject> decorations = new List<GameObject>();
+    public RuleTile tiles;
 }
