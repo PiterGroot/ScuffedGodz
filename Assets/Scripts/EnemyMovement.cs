@@ -17,6 +17,7 @@ public class EnemyMovement : MonoBehaviour
     {
         rotationPoint = gameObject.transform.GetChild(0);
         rb2d = gameObject.GetComponent<Rigidbody2D>();
+        target = FindObjectOfType<PlayerMovement>().transform;
     }
 
     // Update is called once per frame

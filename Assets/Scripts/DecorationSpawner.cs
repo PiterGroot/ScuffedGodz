@@ -52,7 +52,7 @@ public class DecorationSpawner : MonoBehaviour
     {
         print("LEVEL DONE GENERATING");
         PlayerMovement[] players = FindObjectsOfType<PlayerMovement>();
-        foreach (PlayerMovement player in players) player.SetStartPosition(new Vector2(worldMap.x / 2, worldMap.y / 2));
+        foreach (PlayerMovement player in players) player.SetStartPosition(new Vector3(worldMap.x / 2, worldMap.y / 2, 0));
         onLevelGenerated?.Invoke();
     }
 
